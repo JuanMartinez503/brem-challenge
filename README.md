@@ -25,6 +25,9 @@ Make sure to handle edge cases gracefully and provide clear feedback to users.
 <img width="380" alt="Screenshot 2023-12-29 at 5 54 08 PM" src="https://github.com/JuanMartinez503/brem-coding-project/assets/116415860/118bf4db-997e-4efc-8fc6-3bd75eda0758">
 <img width="380" alt="Screenshot 2023-12-29 at 5 56 40 PM" src="https://github.com/JuanMartinez503/brem-coding-project/assets/116415860/d64c2a61-4ab4-4c27-81d7-8ad28f796dfb">
 
+<img width="330" alt="Screenshot 2024-01-14 at 5 49 08 PM" src="https://github.com/JuanMartinez503/brem-challenge/assets/116415860/8029d755-74be-424c-9f1c-c16ee2195586">
+
+![Screenshot 2024-01-14 at 5 49 35 PM](https://github.com/JuanMartinez503/brem-challenge/assets/116415860/37c04fb7-e598-4bf7-ad2e-22ab1539bc25)
 
 ## Getting Started
 
@@ -33,13 +36,11 @@ Make sure to handle edge cases gracefully and provide clear feedback to users.
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/JuanMartinez503/brem-coding-project.git
+   git clone https://github.com/JuanMartinez503/brem-challenge.git
    ```
 2. cd into project 
+
+3. Install and run project
    ```bash
-   cd brem-coding-challenge
-   ```
-3. Install and run project(there is a small bug that makes you have to double load the homepage at the beggining in order to proceed, I think the bug comes from trying to sync up the api to the front end)
-   ```bash
-   npm i;npm run dev
+   npm i;npx prisma migrate dev;npm run dev
    ```
