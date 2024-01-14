@@ -22,8 +22,10 @@ The goal of this coding challenge is to create a web-based login and sign in and
 
 Make sure to handle edge cases gracefully and provide clear feedback to users.
 ## Screenshots 
-<img width="380" alt="Screenshot 2023-12-29 at 5 54 08 PM" src="https://github.com/JuanMartinez503/brem-coding-project/assets/116415860/118bf4db-997e-4efc-8fc6-3bd75eda0758">
-<img width="380" alt="Screenshot 2023-12-29 at 5 56 40 PM" src="https://github.com/JuanMartinez503/brem-coding-project/assets/116415860/d64c2a61-4ab4-4c27-81d7-8ad28f796dfb">
+![Screenshot 2024-01-14 at 6 44 26 PM](https://github.com/JuanMartinez503/brem-challenge/assets/116415860/4040d56e-32e4-433c-b7b6-afff0fd3b634)
+
+![Screenshot 2024-01-14 at 6 44 48 PM](https://github.com/JuanMartinez503/brem-challenge/assets/116415860/72635756-cc8a-41ed-8a19-ce8224db4b0e)
+
 
 <img width="330" alt="Screenshot 2024-01-14 at 5 49 08 PM" src="https://github.com/JuanMartinez503/brem-challenge/assets/116415860/8029d755-74be-424c-9f1c-c16ee2195586">
 
