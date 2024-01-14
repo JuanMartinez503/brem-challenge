@@ -1,54 +1,45 @@
-# Astro Starter Kit: Basics
+# Brem Coding Challenge - Login and Sign-Up Form
 
-```sh
-npm create astro@latest -- --template basics
-```
+## Overview
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+Welcome to the Brem Coding Challenge - Login and Sign-Up Form edition! This challenge focuses on building a simple login and sign-up form. My objective is to implement the form functionalities and log the entered data to the console. 
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Challenge Description
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+The goal of this coding challenge is to create a web-based login and sign in and log to thr console.
 
-## 🚀 Project Structure
 
-Inside of your Astro project, you'll see the following folders and files:
+1. **Login Form:**
+   - Fields: Username and Password
+   - Validation: Ensure that both fields are filled before allowing submission.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+2. **Sign-Up Form:**
+   - Fields: Username, Email, Password, Confirm Password
+   - Validation: Ensure all fields are filled, the email is in a valid format, and the passwords match.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+3. **Logging Data:**
+   - Console log the entered data from both the login and sign-up forms.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+Make sure to handle edge cases gracefully and provide clear feedback to users.
+## Screenshots 
+<img width="380" alt="Screenshot 2023-12-29 at 5 54 08 PM" src="https://github.com/JuanMartinez503/brem-coding-project/assets/116415860/118bf4db-997e-4efc-8fc6-3bd75eda0758">
+<img width="380" alt="Screenshot 2023-12-29 at 5 56 40 PM" src="https://github.com/JuanMartinez503/brem-coding-project/assets/116415860/d64c2a61-4ab4-4c27-81d7-8ad28f796dfb">
 
-Any static assets, like images, can be placed in the `public/` directory.
 
-## 🧞 Commands
+## Getting Started
 
-All commands are run from the root of the project, from a terminal:
+### Installation
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+1. Clone this repository:
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+   ```bash
+   git clone https://github.com/JuanMartinez503/brem-coding-project.git
+   ```
+2. cd into project 
+   ```bash
+   cd brem-coding-challenge
+   ```
+3. Install and run project(there is a small bug that makes you have to double load the homepage at the beggining in order to proceed, I think the bug comes from trying to sync up the api to the front end)
+   ```bash
+   npm i;npm run dev
+   ```
