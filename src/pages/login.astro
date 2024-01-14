@@ -1,0 +1,137 @@
+---
+import Layout from "../layouts/Layout.astro";
+//I was able to find this in the documentation after searching for a while. 
+if (Astro.request.method === "POST") {
+  try {
+    const data = await Astro.request.formData();
+    const name = data.get("username");
+    const password = data.get("password");
+    //added a quick if statement to check if a password and name are present
+    if(name && password) {
+    console.log('username: '+name);
+    console.log('password: '+password);
+    } else {
+        console.log('username or password are missing')
+    }
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error(error.message);
+    }
+  }
+}
+
+
+---
+
+<Layout title="Sign In">
+  <main class="form-container">
+    <form method="post" action="/api/login" >
+      <h1>Sign in</h1>
+
+      <label for="username">Username</label>
+      <input id="username" name="username" type="text" required placeholder="Enter Username" />
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" required placeholder="Enter Password"/>
+      <button>Sign in</button>
+      <a href="/signup">Not a member? Click here to sign up!</a>
+    </form>
+  </main>
+</Layout>
+
+<style>
+  .form-container {
+    width: 50%;
+    position: relative;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    min-height: 40dvw;
+    padding: 5%;
+    background: transparent;
+    border-radius: 20px;
+    z-index: 2;
+    
+  }
+  .form-container::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(215, 215, 215, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(255,255,255,.2);
+    
+    z-index: -2;
+}
+  .form-container form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .form-container h1 {
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(to right, rgba(0, 168, 253), #fff 15%, #e00a95);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 15s linear infinite;
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 75%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 70%;
+    }
+  }
+  .form-container input  {
+    width: 100%;
+    margin: 1rem 0 1rem 0;
+    padding: .5rem;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  .form-container button {
+    margin-top: 1rem;
+    border-radius: 5px;
+    padding: .5rem;
+    border: none
+    ;
+    background: linear-gradient(to right, #00fffc,#cb77d1);
+    
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    width: 7rem;
+    margin: 1rem auto;
+
+  }
+  .form-container button:hover{
+    background: linear-gradient(to right, rgba(0, 168, 253), #e00a95);
+    transform: scale(1.05);
+    transition: all .3s;
+    color: white;
+  }
+  .form-container button:focused {
+    transform: scale(.9);
+    transition: all .3s;
+  }
+  
+  .form-container a {
+    width: 100%;
+    text-align: center;
+  }
+  @media  screen and (max-width:800px) {
+    .form-container {
+        width: 80%;
+    }
+    .form-container button {
+        width: 100%;
+    }
+  }
+</style>

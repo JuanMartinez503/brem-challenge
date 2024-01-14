@@ -1,0 +1,93 @@
+---
+import Layout from "../layouts/Layout.astro";
+// customized the home html and css
+const user = Astro.locals.user;
+if (!user) {
+  return Astro.redirect("/login");
+}
+
+const userId = user.id; // I can only get the userId for some reason
+---
+
+<Layout title="Welcome to Astro.">
+  <main class="home-container">
+    <h1>Welcome to my coding assignment</h1>
+    <div class="text">
+      <h4>Dear Ted,</h4>
+      <p>
+     
+I sincerely appreciate the opportunity to tackle this coding challenge. I am eager to delve into the discussion of your insights and solutions. Thank you for your time and consideration.
+      </p>
+      <h4>Sincerely,</h4>
+      <h4>Juan Martinez</h4>
+    </div>
+    <a href="/signup">Click the link to Start</a>
+    {
+      userId && (
+        <form method="post" action="/api/logout">
+          <div class="logout-container">
+            {" "}
+            <h2>Welcome, {userId}</h2>
+            <button>Sign out</button>
+          </div>
+        </form>
+      )
+    }
+  </main>
+</Layout>
+
+<style>
+  .home-container {
+    width: 50%;
+    position: relative;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    min-height: 40dvw;
+    padding: 5%;
+    background: transparent;
+    border-radius: 20px;
+    z-index: 2;
+  }
+  .home-container::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(215, 215, 215, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+
+    z-index: -2;
+  }
+  .home-container a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .logout-container {
+	text-align: center;
+  }
+  .logout-container button {
+	padding: .5rem;
+	color: white;
+	background-color: red;
+	box-shadow: rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
+	border: none;
+  }
+  .logout-container button:focus {
+	transform: scale(.95);
+	filter: brightness(.8);
+  }
+  .logout-container h2 {
+	color: rgb(78, 255, 255);
+	text-shadow: 1px 1px 3px black;
+  }
+  @media screen and (max-width: 800px) {
+    .home-container {
+      width: 80%;
+    }
+  }
+</style>
